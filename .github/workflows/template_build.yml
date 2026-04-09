@@ -20,8 +20,7 @@ jobs:
         with:
           node-version: ${{ inputs.node_version }}
 
-      - name: Instalar dependencias
-        run: npm install
+      
 
       - name: Build
         run: echo "Building project..."

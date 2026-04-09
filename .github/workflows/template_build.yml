@@ -1,0 +1,27 @@
+name: Build Template v1.0.0
+
+on:
+  workflow_call:
+    inputs:
+      node_version:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node_version }}
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Build
+        run: echo "Building project..."

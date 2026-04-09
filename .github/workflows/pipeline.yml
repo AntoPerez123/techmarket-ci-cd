@@ -1,0 +1,22 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    uses: ./.github/workflows/template_build.yml
+    with:
+      node_version: "18"
+
+  test:
+    needs: build
+    uses: ./.github/workflows/template_test.yml
+
+  deploy:
+    needs: test
+    uses: ./.github/workflows/template_deploy.yml
+    with:
+      environment: "production"
+      

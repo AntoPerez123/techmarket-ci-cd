@@ -1,0 +1,22 @@
+name: Deploy Template v1.0.0
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      ENVIRONMENT: ${{ inputs.environment }}
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Deploy
+        run: echo "Deploying to $ENVIRONMENT"

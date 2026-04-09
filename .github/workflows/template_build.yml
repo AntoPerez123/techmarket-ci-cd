@@ -20,7 +20,8 @@ jobs:
         with:
           node-version: ${{ inputs.node_version }}
 
-      
+      - name: Simular instalación
+        run: echo "Instalando dependencias correctamente"
 
-      - name: Build
-        run: echo "Building project..."
+      - name: Simular build
+        run: echo "Build completado"

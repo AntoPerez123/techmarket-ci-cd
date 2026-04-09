@@ -11,8 +11,5 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      
-    
-
-      - name: Ejecutar tests
-        run: echo "Ejecutando pruebas..."
+      - name: Simular pruebas
+        run: echo "Tests ejecutados correctamente"

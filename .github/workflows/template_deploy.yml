@@ -18,5 +18,5 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Deploy
-        run: echo "Deploying to $ENVIRONMENT"
+      - name: Simular deploy
+        run: echo "Deploy realizado en $ENVIRONMENT"
